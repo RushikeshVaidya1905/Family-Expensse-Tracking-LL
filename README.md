@@ -1,35 +1,44 @@
-This will track the Family Expense of each and every member. The Expense Tracking System is an application to efficiently track and manage family expenses. It allows for individual and family-level expense tracking, providing insights into category-wise expenses, individual contributions, and overall spending trends. The system is implemented using arrays of structures for storing and organizing data.
+Family Expense Tracking System
+This system tracks the family expenses of each and every member in a household. The Expense Tracking System is a console-based application developed to efficiently manage and analyze expenses at both the individual and family levels. It provides detailed insights into category-wise spending, individual contributions, and overall family financial trends.
+
+The entire system is implemented using linked lists to dynamically manage data such as users, families, and expenses. All database-like functionalities — storage, insertion, deletion, and retrieval — are handled through various linked list operations, offering flexible and efficient memory usage.
 
 Features
+🧑‍💼 User Management
+AddUser()
+Add a new user and insert them into the list in sorted order by User ID.
 
---User Management AddUser():
+👨‍👩‍👧‍👦 Family Management
+CreateFamily()
+Create a family with 1 to 4 members. Automatically calculates the total monthly income and expenses of the family.
 
-Add a new user, storing them in a sorted order based on their User ID.
+Update_or_delete_individual_Family_details()
+Update details of individuals or entire families.
+Deleting the last member of a family automatically removes the family node from the list.
 
---Family Management CreateFamily():
+💰 Expense Management
+AddExpense()
+Add an expense for a user, categorized under:
+Rent, Utility, Grocery, Stationary, or Leisure.
+Expenses are stored in sorted order by User ID and Expense ID.
 
-Create families with 1 to 4 members, calculate total monthly family income and expenses automatically. Update_or_delete_individual_Family_details():
+Update_delete_expense()
+Modify or remove an existing expense.
+All related totals are automatically recalculated.
 
-Update individual or family details.
+📊 Expense Tracking and Analysis
+Get_total_expense()
+Displays the total family expense for the month.
+Indicates whether the expenses are within or beyond the income, and shows the difference.
 
-Deleting a single individual with only one member in the family automatically deletes the family.
+Get_categorical_expense(string category)
+Displays the total amount spent in a given category for the family.
+Lists individual contributions in descending order by amount.
 
---Expense Management
+Get_highest_expense_day()
+Shows the date with the highest overall family expense.
 
-AddExpense():
+Get_individual_expense(UserID)
+Displays a user’s total expenses for the month.
+Breaks down their expenses category-wise, in descending order.
 
-Add expenses for users, categorized by Rent, Utility, Grocery, Stationary, or Leisure, and stored in sorted order by User ID and Expense ID. Update_delete_expense():
-
-Update or delete an existing expense, automatically recalculating all associated totals.
-
---Expense Tracking and Analysis
-
-Get_total_expense():
-
-Displays the total family expense for the month. Indicates whether the expenses are within or surpass the total income, along with the difference. Get_categorical_expense(string category):
-
-Prints the total expense for a specific category for the family. Shows individual contributions in sorted order by amount. Get_highest_expense_day():
-
-Prints the date with the highest family expense. Get_individual_expense(UserID):
-
-Displays the total expense for a specific user for the month. Provides a breakdown of their category-wise expenses in descending order.
